@@ -15,6 +15,7 @@ public class OnCollisonEvents : MonoBehaviour
     {
         if (matchTags.Count == 0)
         {
+            print(collision.collider.name + " On Collision Entered");
             onCollisionEnter.Invoke(null);
         }
         else
@@ -23,6 +24,7 @@ public class OnCollisonEvents : MonoBehaviour
             {
                 if (collision.gameObject.CompareTag(matchTags[i]))
                 {
+                    print(collision.collider.name + " On Collision Entered");
                     onCollisionEnter.Invoke(null);
                 }
             }
@@ -33,6 +35,7 @@ public class OnCollisonEvents : MonoBehaviour
     {
         if (matchTags.Count == 0)
         {
+            print(collision.collider.name + " On Collision Staying");
             onCollisionStay.Invoke(null);
         }
         else
@@ -41,6 +44,7 @@ public class OnCollisonEvents : MonoBehaviour
             {
                 if (collision.gameObject.CompareTag(matchTags[i]))
                 {
+                    print(collision.collider.name + " On Collision Staying");
                     onCollisionStay.Invoke(null);
                 }
             }
@@ -51,6 +55,7 @@ public class OnCollisonEvents : MonoBehaviour
     {
         if (matchTags.Count == 0)
         {
+            print(collision.collider.name + " On Collision Exited");
             onCollisionExit.Invoke(null);
         }
         else
@@ -59,6 +64,7 @@ public class OnCollisonEvents : MonoBehaviour
             {
                 if (collision.gameObject.CompareTag(matchTags[i]))
                 {
+                    print(collision.collider.name + " On Collision Exited");
                     onCollisionExit.Invoke(null);
                 }
             }
